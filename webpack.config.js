@@ -62,6 +62,7 @@ module.exports = {
   // Settings for webpack-dev-server
   devServer: {
     clientLogLevel: 'info',
+    host: '0.0.0.0',
     open: true,
   },
 };
