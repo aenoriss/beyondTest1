@@ -22,6 +22,9 @@ AFRAME.registerComponent("markerhandler", {
             this.el.setAttribute("visible", true);
             status.trigger[elemId].taken == true;
             let soundEl = document.createElement("a-sound");
+
+            socket.emit("updateEgg", status.trigger);
+
   
             //Discovery Sound FX
             soundEl.setAttribute("src", "https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/sound1.mp3?v=1650871234471");
@@ -31,18 +34,18 @@ AFRAME.registerComponent("markerhandler", {
 
             sceneEl.appendChild(soundEl);
 
-            soundEl.addEventListener("sound-ended", function() {
-              //Fly Sound FX 
-              setTimeout(function() {
-                //your code to be executed after 1 second
-              }, 3000);
+            setTimeout(function() {
+              //your code to be executed after 1 second
               let soundEl2 = document.createElement("a-sound");
               soundEl2.setAttribute("src", "https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/sound2.mp3?v=1650872767123");
               soundEl2.setAttribute("position", "0 0 0");
               soundEl2.setAttribute("loop", false);
-              soundEl2.setAttribute("autplay", true);
+              soundEl2.setAttribute("autoplay", true);
+
               sceneEl.appendChild(soundEl2);
-            })
+            }, 6000);
+
+           
           }
         });
       })
