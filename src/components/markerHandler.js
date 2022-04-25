@@ -10,10 +10,21 @@ AFRAME.registerComponent("markerhandler", {
       let socketCompAtt = socketComp.getAttribute("socket");
       let socket = socketCompAtt.socket;
 
-      console.log("xD HABDLEER", this.el.getAttribute("id"))
+      let sceneEl = document.querySelector("a-scene");
 
+      let elemId = this.el.getAttribute("id");
       socket.emit("eggStatus", undefined, status => {
         console.log("EGG STATUS", status.trigger)
+        if(status.trigger[elemId].taken == false){
+          this.el.setAttribute("visible", true);
+          status.trigger[elemId].taken == true;
+          let soundEl = document.createElement("a-sound");
+
+          soundEl.setAttribute("src", "https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/sound1.mp3?v=1650871234471");
+          soundEl.setAttribute("position", "0 0 0");
+          soundEl.setAttribute("loop", false);
+          sceneEl.appendChild(soundEl);
+        }
       });
 
       // socket.on("ping", (data)=> {
