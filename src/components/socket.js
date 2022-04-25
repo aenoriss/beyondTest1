@@ -32,4 +32,4 @@ AFRAME.registerComponent("socket", {
     play: function () {},
   });
   
-  
+  export default socket
