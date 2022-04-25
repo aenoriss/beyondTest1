@@ -16,6 +16,8 @@ AFRAME.registerComponent("markerhandler", {
 
         let markerEl = e.target;
         let elemId = markerEl.getAttribute("id");
+        markerEl.firstElementChild.setAttribute("visible", true);
+
         // let modEl = e.target.fir
 
 
