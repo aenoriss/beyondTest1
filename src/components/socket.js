@@ -6,7 +6,7 @@ AFRAME.registerComponent("socket", {
     init: function () {  
       //Create Primitive
       console.log("xD")
-      const socket = io("https://eggback.herokuapp.com:3001")
+      const socket = io("https://eggback.herokuapp.com")
 
       socket.on("connect", () => {
           alert("you connected with: " + socket.id)
