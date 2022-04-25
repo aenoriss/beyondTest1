@@ -23,7 +23,9 @@ AFRAME.registerComponent("markerhandler", {
             status.trigger[elemId].taken == true;
             let soundEl = document.createElement("a-sound");
 
-            socket.emit("updateEgg", status.trigger);
+            socket.emit("updateEgg", status.trigger, cb => {
+              alert("table updated")
+            });
 
   
             //Discovery Sound FX
