@@ -29,7 +29,7 @@ AFRAME.registerComponent("markerhandler", {
 
           if(triggerSelected.taken == false){
 
-            let modEl = document.querySelector(`#${elemId}`)
+            let modEl = document.getElementById(elemId)
             modEl.setAttribute("visible", true);
             status.trigger[elemId].taken == true;
             let soundEl = document.createElement("a-sound");
