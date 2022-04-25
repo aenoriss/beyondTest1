@@ -14,8 +14,9 @@ AFRAME.registerComponent("markerhandler", {
 
       let elemId = this.el.getAttribute("id");
 
+      
 
-      this.el.sceneEl.addEventListener("markerFound", (e)=> {
+      // this.el.sceneEl.addEventListener("markerFound", (e)=> {
         socket.emit("eggStatus", undefined, status => {
           let triggerSelected = undefined;
           console.log("EGG STATUS", status.trigger[elemId].taken)
@@ -58,7 +59,7 @@ AFRAME.registerComponent("markerhandler", {
            
           }
         });
-      })
+      // })
 
       // socket.on("ping", (data)=> {
       //     console.log("DATAAA", data);
