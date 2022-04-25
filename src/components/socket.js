@@ -8,8 +8,8 @@ AFRAME.registerComponent("socket", {
       console.log("xD")
       const socket = io("https://eggback.herokuapp.com:3000")
 
-      io.on("connection", socket => {
-          console.log(socket.id)
+      io.on("connect", socket => {
+          alert("you connected with: " + socket.id)
       })
   
       //Populate Scene
