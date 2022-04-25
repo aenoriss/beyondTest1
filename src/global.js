@@ -1,5 +1,5 @@
 // Mandatory A-Frame import
-require('aframe');
+// require('aframe');
 
 // Additional optional components
 // require('aframe-event-set-component');
