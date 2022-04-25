@@ -23,7 +23,7 @@ AFRAME.registerComponent("markerhandler", {
             status.trigger[elemId].taken == true;
             let soundEl = document.createElement("a-sound");
 
-            socket.emit("updateEgg", status.trigger, cb => {
+            socket.emit("updateEgg", elemId, cb => {
               alert("table updated")
             });
 
