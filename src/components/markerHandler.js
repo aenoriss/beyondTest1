@@ -17,7 +17,7 @@ AFRAME.registerComponent("markerhandler", {
 
       this.el.sceneEl.addEventListener("markerFound", (e)=> {
         socket.emit("eggStatus", undefined, status => {
-          let triggerSelected;
+          let triggerSelected = undefined;
           console.log("EGG STATUS", status.trigger[elemId].taken)
           status.trigger.forEach((e => {
             if(e.id == elemId){
