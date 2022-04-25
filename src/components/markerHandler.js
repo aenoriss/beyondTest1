@@ -11,8 +11,15 @@ AFRAME.registerComponent("markerhandler", {
       let socket = socketCompAtt.socket;
 
       let sceneEl = document.querySelector("a-scene");
-
+      
       let elemId = this.el.getAttribute("id");
+
+
+      this.el.addEventListener("markerFound", (e)=> {
+        alert(this.elemId);
+      })
+
+
       socket.emit("eggStatus", undefined, status => {
         console.log("EGG STATUS", status.trigger)
         if(status.trigger[elemId].taken == false){
@@ -22,8 +29,9 @@ AFRAME.registerComponent("markerhandler", {
 
           soundEl.setAttribute("src", "https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/sound1.mp3?v=1650871234471");
           soundEl.setAttribute("position", "0 0 0");
-          soundEl.setAttribute("loop", false);
+          soundEl.setAttribute("loop", true);
           sceneEl.appendChild(soundEl);
+
         }
       });
 
