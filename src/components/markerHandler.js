@@ -33,7 +33,7 @@ AFRAME.registerComponent("markerhandler", {
 
           if(triggerSelected.taken == false){
 
-            // console.log("modEl", modEl)
+            console.log("markerEl", markerEl)
 
 
             markerEl.setAttribute("visible", true);
