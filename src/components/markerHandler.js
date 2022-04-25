@@ -32,10 +32,11 @@ AFRAME.registerComponent("markerhandler", {
             soundEl.playSound();
             soundEl.addEventListener("sound-ended", function() {
               //Fly Sound FX 
-              soundEl.setAttribute("src", "https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/sound2.mp3?v=1650872767123");
-              soundEl.setAttribute("position", "0 0 0");
-              soundEl.setAttribute("loop", false);
-              soundEl.playSound();
+              let soundEl2 = document.createElement("a-sound");
+              soundEl2.setAttribute("src", "https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/sound2.mp3?v=1650872767123");
+              soundEl2.setAttribute("position", "0 0 0");
+              soundEl2.setAttribute("loop", false);
+              soundEl2.playSound();
             })
           }
         });
