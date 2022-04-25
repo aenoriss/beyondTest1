@@ -16,11 +16,11 @@ AFRAME.registerComponent("socket", {
 
       console.log("CUBEE", cubeEl)
 
-      socket.on("connect", () => {
+      this.data.socket.on("connect", () => {
           alert("you connected with: " + socket.id)
       })
 
-      socket.on("ping", (data)=> {
+      this.data.socket.on("ping", (data)=> {
           console.log("DATAAA", data);
         //   cubeEl.setAttribute("color", colors[data]);
       })
