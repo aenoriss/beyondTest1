@@ -2,11 +2,13 @@ import { io } from "socket.io-client";
 
 AFRAME.registerComponent("socket", {
     //Schema enables customization
-    schema: {},
+    schema: {
+        socket: {default: null}
+    },
     init: function () {  
       //Create Primitive
-      console.log("xD")
-      const socket = io("https://eggback.herokuapp.com")
+      this.data.socket = io("https://eggback.herokuapp.com")
+      console.log("socket.io",socket)
 
       let sceneEl = document.querySelector("a-scene");
       let cubeEl = document.querySelector("#cubeEl");
@@ -32,4 +34,3 @@ AFRAME.registerComponent("socket", {
     play: function () {},
   });
   
-  export default socket
