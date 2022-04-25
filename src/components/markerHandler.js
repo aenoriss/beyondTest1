@@ -14,7 +14,7 @@ AFRAME.registerComponent("markerhandler", {
 
       let elemId = this.el.getAttribute("id");
 
-      
+      console.log("ELEM", elemId);
 
       // this.el.sceneEl.addEventListener("markerFound", (e)=> {
         socket.emit("eggStatus", undefined, status => {
