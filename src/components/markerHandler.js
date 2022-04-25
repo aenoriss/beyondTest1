@@ -18,8 +18,6 @@ AFRAME.registerComponent("markerhandler", {
         let elemId = markerEl.getAttribute("id");
         // let modEl = e.target.fir
 
-        console.log("markerElASDASDA", markerEl.firstElementChild)
-
 
         console.log("elemIdelemId", e.target)
 
@@ -36,7 +34,7 @@ AFRAME.registerComponent("markerhandler", {
 
           if(triggerSelected.taken == false){
 
-            markerEl.setAttribute("visible", true);
+            markerEl.firstElementChild.setAttribute("visible", true);
             console.log("markerEl", markerEl)
 
 
