@@ -1,4 +1,5 @@
 import { io } from "socket.io-client";
+import { Server } from 'socket.io';
 
 AFRAME.registerComponent("socket", {
     //Schema enables customization
@@ -6,7 +7,7 @@ AFRAME.registerComponent("socket", {
     init: function () {  
       //Create Primitive
       console.log("xD")
-      const socket = io("https://eggback.herokuapp.com:3000")
+      const socket = io("https://eggback.herokuapp.com")
 
       socket.on("connect", () => {
           alert("you connected with: " + socket.id)
