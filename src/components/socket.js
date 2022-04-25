@@ -8,7 +8,7 @@ AFRAME.registerComponent("socket", {
       console.log("xD")
       const socket = io("https://eggback.herokuapp.com")
 
-      io.on("connect", () => {
+      socket.on("connect", () => {
           alert("you connected with: " + socket.id)
       })
   
