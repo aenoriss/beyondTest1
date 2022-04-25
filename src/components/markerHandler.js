@@ -67,7 +67,7 @@ AFRAME.registerComponent("markerhandler", {
 
               markerEl.firstElementChild.setAttribute("animation", {
                 property: "position",
-                to: "0 10 0",
+                to: "0 0 10",
                 dur: 5000,
                 easing: "linear",
                 dir: "alternate",
