@@ -13,7 +13,9 @@ AFRAME.registerComponent("markerhandler", {
       let sceneEl = document.querySelector("a-scene");
 
       this.el.sceneEl.addEventListener("markerFound", (e)=> {
-        let elemId = e.target.getAttribute("id");
+
+        let markerEl = e.target;
+        let elemId = markerEl.getAttribute("id");
         // let modEl = e.target.fir
 
         console.log("elemIdelemId", e.target)
@@ -34,7 +36,7 @@ AFRAME.registerComponent("markerhandler", {
             // console.log("modEl", modEl)
 
 
-            this.el.setAttribute("visible", true);
+            markerEl.setAttribute("visible", true);
             status.trigger[elemId].taken == true;
             let soundEl = document.createElement("a-sound");
 
