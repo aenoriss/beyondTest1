@@ -14,6 +14,8 @@ AFRAME.registerComponent("markerhandler", {
 
       this.el.sceneEl.addEventListener("markerFound", (e)=> {
         let elemId = e.target.getAttribute("id");
+        // let modEl = e.target.fir
+
         console.log("elemIdelemId", e.target)
 
         socket.emit("eggStatus", undefined, status => {
@@ -29,11 +31,10 @@ AFRAME.registerComponent("markerhandler", {
 
           if(triggerSelected.taken == false){
 
-            let modEl = document.getElementById(elemId)
-            console.log("modEl", modEl)
+            // console.log("modEl", modEl)
 
 
-            modEl.setAttribute("visible", true);
+            this.el.setAttribute("visible", true);
             status.trigger[elemId].taken == true;
             let soundEl = document.createElement("a-sound");
 
