@@ -6,7 +6,7 @@ AFRAME.registerComponent("socket", {
     init: function () {  
       //Create Primitive
       console.log("xD")
-      const socket = io("https://192.168.0.120:8080/")
+      const socket = io("https://eggback.herokuapp.com/")
   
       //Populate Scene
     },
