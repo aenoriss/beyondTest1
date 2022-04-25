@@ -18,6 +18,9 @@ AFRAME.registerComponent("markerhandler", {
         let elemId = markerEl.getAttribute("id");
         // let modEl = e.target.fir
 
+        console.log("markerElASDASDA", markerEl.firstElementChild)
+
+
         console.log("elemIdelemId", e.target)
 
         socket.emit("eggStatus", undefined, status => {
@@ -33,7 +36,6 @@ AFRAME.registerComponent("markerhandler", {
 
           if(triggerSelected.taken == false){
 
-            console.log("markerEl", markerEl)
             markerEl.setAttribute("visible", true);
             console.log("markerEl", markerEl)
 
