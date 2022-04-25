@@ -27,6 +27,8 @@ AFRAME.registerComponent("markerhandler", {
             soundEl.setAttribute("src", "https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/sound1.mp3?v=1650871234471");
             soundEl.setAttribute("position", "0 0 0");
             soundEl.setAttribute("loop", true);
+            soundEl.setAttribute("autoplay", true);
+
             sceneEl.appendChild(soundEl);
   
           }
