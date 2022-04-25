@@ -8,7 +8,7 @@ AFRAME.registerComponent("socket", {
     init: function () {  
       //Create Primitive
       this.data.socket = io("https://eggback.herokuapp.com")
-      console.log("socket.io",socket)
+      console.log("socket.io",this.data.socket)
 
       let sceneEl = document.querySelector("a-scene");
       let cubeEl = document.querySelector("#cubeEl");
