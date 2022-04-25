@@ -19,7 +19,6 @@ AFRAME.registerComponent("markerhandler", {
       // this.el.sceneEl.addEventListener("markerFound", (e)=> {
         socket.emit("eggStatus", undefined, status => {
           let triggerSelected = undefined;
-          console.log("EGG STATUS", status.trigger[elemId].taken)
           status.trigger.forEach((e => {
             if(e.id == elemId){
               triggerSelected = e;
@@ -36,7 +35,6 @@ AFRAME.registerComponent("markerhandler", {
               alert("table updated")
             });
 
-  
             //Discovery Sound FX
             soundEl.setAttribute("src", "https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/sound1.mp3?v=1650871234471");
             soundEl.setAttribute("position", "0 0 0");
