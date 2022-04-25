@@ -23,7 +23,7 @@ AFRAME.registerComponent("markerhandler", {
           status.trigger.forEach((e => {
             if(e.id == elemId){
               triggerSelected = e;
-              alert(triggerSelected.taken);
+              alert(triggerSelected);
             }
           }))
 
