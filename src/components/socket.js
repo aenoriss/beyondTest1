@@ -19,11 +19,6 @@ AFRAME.registerComponent("socket", {
       this.data.socket.on("connect", () => {
           alert("you connected with: " + this.data.socket.id)
       })
-
-      this.data.socket.on("ping", (data)=> {
-          console.log("DATAAA", data);
-        //   cubeEl.setAttribute("color", colors[data]);
-      })
   
       //Populate Scene
     },

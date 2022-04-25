@@ -8,7 +8,14 @@ AFRAME.registerComponent("markerhandler", {
       //Create Primitive
       let socketComp = document.querySelector("#socket");
       let socketCompAtt = socketComp.getAttribute("socket");
-      console.log("xD", socketCompAtt)
+      let socket =socketCompAtt.socket;
+
+      console.log("xD", socket)
+
+      socket.on("ping", (data)=> {
+        console.log("DATAAA", data);
+      //   cubeEl.setAttribute("color", colors[data]);
+    })
 
       // socket.on("ping", (data)=> {
       //     console.log("DATAAA", data);
