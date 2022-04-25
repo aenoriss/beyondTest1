@@ -10,6 +10,7 @@ AFRAME.registerComponent("socket", {
 
       let sceneEl = document.querySelector("a-scene");
       let cubeEl = document.querySelector("#cubeEl");
+      let colors = ["blue","red","green","yellow"];
 
       console.log("CUBEE", cubeEl)
 
@@ -19,7 +20,7 @@ AFRAME.registerComponent("socket", {
 
       socket.on("ping", (data)=> {
           console.log("DATAAA", data);
-          
+          cubeEl.setAttribute("color", colors[data]);
       })
   
       //Populate Scene
