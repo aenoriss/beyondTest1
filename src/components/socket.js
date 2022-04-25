@@ -20,7 +20,7 @@ AFRAME.registerComponent("socket", {
 
       socket.on("ping", (data)=> {
           console.log("DATAAA", data);
-          cubeEl.setAttribute("color", colors[data]);
+        //   cubeEl.setAttribute("color", colors[data]);
       })
   
       //Populate Scene
