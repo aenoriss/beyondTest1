@@ -10,7 +10,7 @@ AFRAME.registerComponent("markerhandler", {
       let socketCompAtt = socketComp.getAttribute("socket");
       let socket = socketCompAtt.socket;
 
-      console.log("xD HABDLEER", this.id)
+      console.log("xD HABDLEER", this.el)
 
       socket.emit("eggStatus", undefined, status => {
         console.log("EGG STATUS", status.trigger)
