@@ -11,12 +11,12 @@ AFRAME.registerComponent("markerhandler", {
       let socket = socketCompAtt.socket;
 
       let sceneEl = document.querySelector("a-scene");
-      
+
       let elemId = this.el.getAttribute("id");
 
 
       this.el.addEventListener("markerFound", (e)=> {
-        alert(this.elemId);
+        alert("xzcdazsddasd", this.elemId);
       })
 
 
