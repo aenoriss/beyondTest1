@@ -8,8 +8,8 @@ AFRAME.registerComponent("socket", {
       console.log("xD")
       const socket = io("https://eggback.herokuapp.com")
 
-      let sceneEl = document.querySelector("a-scene");
-      let cubeEl = document.querySelector("cubeEl");
+      let sceneEl = document.select("a-scene");
+      let cubeEl = document.querySelector("#cubeEl");
 
       console.log("CUBEE", cubeEl)
 
