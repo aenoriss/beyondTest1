@@ -1,7 +1,7 @@
 import { io } from "socket.io-client";
 import socket from "./socket"
 
-AFRAME.registerComponent("markerHandler", {
+AFRAME.registerComponent("markerhandler", {
     //Schema enables customization
     schema: {},
     init: function () {  
