@@ -8,12 +8,18 @@ AFRAME.registerComponent("socket", {
       console.log("xD")
       const socket = io("https://eggback.herokuapp.com")
 
+      let sceneEl = document.querySelector("a-scene");
+      let cubeEl = document.querySelector("cubeEl");
+
+      console.log("CUBEE", cubeEl)
+
       socket.on("connect", () => {
           alert("you connected with: " + socket.id)
       })
 
       socket.on("ping", (data)=> {
           console.log("DATAAA", data);
+          
       })
   
       //Populate Scene
@@ -25,11 +31,4 @@ AFRAME.registerComponent("socket", {
     play: function () {},
   });
   
-  function randomPos(position) {
-    let newX = position.x + (Math.random() - 0.5) * 100;
-    let newY = position.y;
-    let newZ = position.z + (Math.random() - 0.5) * 100;
-    let newPos = newX + " " + newY + " " + newZ;
-    return newPos;
-  }
   
