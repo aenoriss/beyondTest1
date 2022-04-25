@@ -11,6 +11,10 @@ AFRAME.registerComponent("socket", {
       socket.on("connect", () => {
           alert("you connected with: " + socket.id)
       })
+
+      socket.on("ping", (data)=> {
+          console.log("DATAAA", data);
+      })
   
       //Populate Scene
     },
