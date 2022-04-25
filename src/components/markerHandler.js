@@ -15,7 +15,7 @@ AFRAME.registerComponent("markerhandler", {
       let elemId = this.el.getAttribute("id");
 
 
-      this.el.addEventListener("markerFound", (e)=> {
+      this.el.sceneEl.addEventListener("markerFound", (e)=> {
         alert("xzcdazsddasd", this.elemId);
       })
 
