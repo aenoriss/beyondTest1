@@ -22,6 +22,7 @@ AFRAME.registerComponent("markerhandler", {
           status.trigger.forEach((e => {
             if(e.id == elemId){
               triggerSelected = e;
+              console.log("arr", status.trigger)
               console.log("triggerSelected", triggerSelected)
             }
           }))
