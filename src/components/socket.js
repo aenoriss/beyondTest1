@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 AFRAME.registerComponent("socket", {
     //Schema enables customization
     schema: {
-        socket: {default: null}
+        socket: {default: "empty"}
     },
     init: function () {  
       //Create Primitive
