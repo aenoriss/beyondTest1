@@ -60,13 +60,13 @@
       </a-assets-item>
     </a-assets>
 
-    <a-entity id="socket" socket></a-entity>
+    <a-entity id="socket" socket markerHandler></a-entity>
 
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
     <a-marker type="barcode" value="1">
-      <a-entity markerHandler visible="false" id="1" gltf-model="#egg0" position="0 0 0"
+      <a-entity visible="false" id="1" gltf-model="#egg0" position="0 0 0"
         animation="property: position; to: 2 0 -1; loop: false; dur: 10000"></a-entity>
     </a-marker>
     <a-marker type="barcode" value="2">

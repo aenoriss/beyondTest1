@@ -12,12 +12,9 @@ AFRAME.registerComponent("markerhandler", {
 
       let sceneEl = document.querySelector("a-scene");
 
-      let elemId = this.el.getAttribute("id");
-
-      console.log("ELEM", elemId);
-
       this.el.sceneEl.addEventListener("markerFound", (e)=> {
-        console.log("EEEE", e)
+        let elemId = e.target.getAttribute("id");
+
         socket.emit("eggStatus", undefined, status => {
           let triggerSelected = undefined;
           console.log("arr", status.trigger)
