@@ -6,7 +6,9 @@ AFRAME.registerComponent("markerHandler", {
     schema: {},
     init: function () {  
       //Create Primitive
-      console.log("xD", socket)
+      let socketComp = document.querySelector("#socket");
+      let socketCompAtt = socketComp.getAttribute("socket");
+      console.log("xD", socketCompAtt)
 
       // socket.on("ping", (data)=> {
       //     console.log("DATAAA", data);
