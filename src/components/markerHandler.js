@@ -16,7 +16,8 @@ AFRAME.registerComponent("markerhandler", {
 
       console.log("ELEM", elemId);
 
-      // this.el.sceneEl.addEventListener("markerFound", (e)=> {
+      this.el.sceneEl.addEventListener("markerFound", (e)=> {
+        alert(e.id)
         socket.emit("eggStatus", undefined, status => {
           let triggerSelected = undefined;
           console.log("arr", status.trigger)
@@ -55,11 +56,9 @@ AFRAME.registerComponent("markerhandler", {
 
               sceneEl.appendChild(soundEl2);
             }, 6000);
-
-           
           }
         });
-      // })
+      })
 
       // socket.on("ping", (data)=> {
       //     console.log("DATAAA", data);
