@@ -17,7 +17,7 @@ AFRAME.registerComponent("socket", {
       console.log("CUBEE", cubeEl)
 
       this.data.socket.on("connect", () => {
-          alert("you connected with: " + socket.id)
+          alert("you connected with: " + this.data.socket.id)
       })
 
       this.data.socket.on("ping", (data)=> {
