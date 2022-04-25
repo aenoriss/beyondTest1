@@ -28,7 +28,9 @@ AFRAME.registerComponent("markerhandler", {
           }))
 
           if(triggerSelected.taken == false){
-            this.el.setAttribute("visible", true);
+
+            let modEl = document.querySelector(`#${elemId}`)
+            modEl.setAttribute("visible", true);
             status.trigger[elemId].taken == true;
             let soundEl = document.createElement("a-sound");
 
