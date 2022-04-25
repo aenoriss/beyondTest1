@@ -64,6 +64,14 @@ AFRAME.registerComponent("markerhandler", {
               soundEl2.setAttribute("autoplay", true);
 
               sceneEl.appendChild(soundEl2);
+
+              markerEl.firstElementChild.setAttribute("animation", {
+                property: "position",
+                to: "0 10 0",
+                dur: 5000,
+                easing: "linear",
+                dir: "alternate",
+              });
             }, 6000);
           }
         });
