@@ -36,16 +36,16 @@ AFRAME.registerComponent("markerhandler", {
 
           if(triggerSelected.taken == false){
 
-            markerEl.firstElementChild.setAttribute("visible", true);
+            // markerEl.firstElementChild.setAttribute("material", "opacity: 1");
             console.log("markerEl", markerEl)
 
             triggerSelected.taken = true;
             status.trigger[elemId].taken == true;
             let soundEl = document.createElement("a-sound");
 
-            socket.emit("updateEgg", elemId, cb => {
-              alert("table updated")
-            });
+            // socket.emit("updateEgg", elemId, cb => {
+            //   alert("table updated")
+            // });
 
             //Discovery Sound FX
             soundEl.setAttribute("src", "https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/sound1.mp3?v=1650871234471");
