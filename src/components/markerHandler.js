@@ -30,7 +30,7 @@ AFRAME.registerComponent("markerhandler", {
           status.trigger.forEach((e => {
             if(e.id == elemId){
               triggerSelected = e;
-              console.log("triggerSelected", triggerSelected)
+              console.log("triggerSelected", triggerSelected.taken)
             }
           }))
 
@@ -40,7 +40,7 @@ AFRAME.registerComponent("markerhandler", {
             console.log("markerEl", markerEl)
 
             triggerSelected.taken = true;
-            status.trigger[elemId].taken == true;
+            // status.trigger[elemId].taken == true;
             let soundEl = document.createElement("a-sound");
 
             // socket.emit("updateEgg", elemId, cb => {
@@ -55,24 +55,24 @@ AFRAME.registerComponent("markerhandler", {
 
             sceneEl.appendChild(soundEl);
 
-            setTimeout(function() {
-              //your code to be executed after 1 second
-              let soundEl2 = document.createElement("a-sound");
-              soundEl2.setAttribute("src", "https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/sound2.mp3?v=1650872767123");
-              soundEl2.setAttribute("position", "0 0 0");
-              soundEl2.setAttribute("loop", false);
-              soundEl2.setAttribute("autoplay", true);
+            // setTimeout(function() {
+            //   //your code to be executed after 1 second
+            //   let soundEl2 = document.createElement("a-sound");
+            //   soundEl2.setAttribute("src", "https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/sound2.mp3?v=1650872767123");
+            //   soundEl2.setAttribute("position", "0 0 0");
+            //   soundEl2.setAttribute("loop", false);
+            //   soundEl2.setAttribute("autoplay", true);
 
-              sceneEl.appendChild(soundEl2);
+            //   sceneEl.appendChild(soundEl2);
 
-              markerEl.firstElementChild.setAttribute("animation", {
-                property: "position",
-                to: "0 0 -10",
-                dur: 5000,
-                easing: "linear",
-                dir: "alternate",
-              });
-            }, 6000);
+            //   markerEl.firstElementChild.setAttribute("animation", {
+            //     property: "position",
+            //     to: "0 0 -10",
+            //     dur: 5000,
+            //     easing: "linear",
+            //     dir: "alternate",
+            //   });
+            // }, 6000);
           }
         });
       })
