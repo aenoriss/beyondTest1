@@ -21,7 +21,8 @@ AFRAME.registerComponent("pinhandler", {
       console.log("DATAA TIC", data)
       data.forEach((marker) => {
         console.log("marker", marker)
-        switch (marker) {
+        let markerId = marker.id;
+        switch (markerId) {
           case marker.id == 1:
             console.log("marker.taken", marker.taken)
             marker.taken == true && marker0.setAttribute("visible", false);
