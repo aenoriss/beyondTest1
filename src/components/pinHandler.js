@@ -19,6 +19,25 @@ AFRAME.registerComponent("pinhandler", {
 
     socket.on("eggOverview", async (data) => {
       console.log("DATAA TIC", data)
+      data.forEach((marker) => {
+        switch (marker) {
+          case marker.id == 1:
+            marker.taken == true && marker0.setAttribute("visible", "false");
+            break;
+          case marker.id == 2:
+            marker.taken == true && marker1.setAttribute("visible", "false");
+            break;
+          case marker.id == 3:
+            marker.taken == true && marker2.setAttribute("visible", "false");
+            break;
+          case marker.id == 4:
+            marker.taken == true && marker3.setAttribute("visible", "false");
+            break;
+          case marker.id == 5:
+            marker.taken == true && marker4.setAttribute("visible", "false");
+            break;
+        }
+      })
     })
 
 
