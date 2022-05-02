@@ -32,23 +32,25 @@ AFRAME.registerComponent("markerhandler", {
             const material = child.material;
             // Do stuff with the material
             material.transparent = true;
-            material.opacity = 0.1;
+            material.opacity = 0.3;
             console.log("traversed", material);
             // material.map = null;
           }
         })
 
-    
+        markerEl.firstElementChild.addEventListener("model-loaded", (e) => {
+          console.log("model loaded")
           markerEl.firstElementChild.object3D.traverse((child) => {
             if (child.type === 'Mesh') {
               const material = child.material;
               // Do stuff with the material
               material.transparent = true;
-              material.opacity = 0.1;
+              material.opacity = 0.3;
               console.log("traversed", material);
               // material.map = null;
             }
           })
+        })
 
         console.log("elemIdelemId", e.target)
 
@@ -66,20 +68,17 @@ AFRAME.registerComponent("markerhandler", {
           }))
 
           if (triggerSelected.taken == false) {
-            console.log("ENTEREDDDD")
-            markerEl.firstElementChild.addEventListener("model-loaded", (e) => {
-              console.log("model loaded")
+            
               markerEl.firstElementChild.object3D.traverse((child) => {
                 if (child.type === 'Mesh') {
                   const material = child.material;
                   // Do stuff with the material
-                  material.transparent = false;
+                  material.transparent = true;
                   material.opacity = 1;
                   console.log("traversed", material);
                   // material.map = null;
                 }
               })
-            })
 
             console.log("markerEl", markerEl)
 
