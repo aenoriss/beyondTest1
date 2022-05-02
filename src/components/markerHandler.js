@@ -26,7 +26,7 @@ AFRAME.registerComponent("markerhandler", {
         // console.log("campus detected",marker1 )
 
       } else {
-        markerEl.firstElementChild.object3D.traverse((child) => {
+        markerEl.firstElementChild.object3D && markerEl.firstElementChild.object3D.traverse((child) => {
           if (child.type === 'Mesh') {
             const material = child.material;
             // Do stuff with the material
@@ -60,6 +60,7 @@ AFRAME.registerComponent("markerhandler", {
           status.trigger.forEach((e => {
             if (e.id == elemId) {
               triggerSelected = e;
+              e.taken = true;
               console.log("triggerSelected", triggerSelected.taken)
             }
           }))
@@ -82,7 +83,6 @@ AFRAME.registerComponent("markerhandler", {
 
             console.log("markerEl", markerEl)
 
-            triggerSelected.taken = true;
             status.trigger[elemId].taken == true;
             let soundEl = document.createElement("a-sound");
 
