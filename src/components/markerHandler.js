@@ -55,12 +55,13 @@ AFRAME.registerComponent("markerhandler", {
 
         socket.emit("eggStatus", undefined, status => {
           let triggerSelected = undefined;
+          let index = undefined;
           console.log("arr", status.trigger)
 
-          status.trigger.forEach((e => {
+          status.trigger.forEach((e, i => {
             if (e.id == elemId) {
               triggerSelected = e;
-              e.taken = true;
+              index = i;
               console.log("triggerSelected", triggerSelected.taken)
             }
           }))
@@ -83,7 +84,7 @@ AFRAME.registerComponent("markerhandler", {
 
             console.log("markerEl", markerEl)
 
-            // status.trigger[elemId].taken == true;
+            status.trigger[index].taken == true;
             let soundEl = document.createElement("a-sound");
 
             socket.emit("updateEgg", elemId, cb => {
