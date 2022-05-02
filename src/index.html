@@ -34,14 +34,15 @@
 
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
-
+  <!-- <div class="arjs-loader">
+    <div>Loading, please wait...</div>
+  </div> -->
   <!-- a-frame scene -->
   <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
     <a-assets>
-      <a-assets-item id="egg0"
-        src="/egg0.gltf">
+      <a-assets-item id="egg0" src="eggTest.glb">
       </a-assets-item>
       <a-assets-item id="egg1"
         src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/egg1.gltf?v=1650864101186">
@@ -58,36 +59,62 @@
       <a-assets-item id="egg5"
         src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/egg5.gltf?v=1650864099314">
       </a-assets-item>
+      <a-assets-item id="campus"
+        src="https://cdn.glitch.me/e3e71082-00bd-4110-8213-e2a08e866e77/campus2.gltf?v=1651127072578">
+      </a-assets-item>
+      <a-assets-item id="pin0" src="marker0.glb"/>
+      <a-assets-item id="pin1" src="marker1.glb"/>
+      <a-assets-item id="pin2" src="marker2.glb"/>
+      <a-assets-item id="pin3" src="marker3.glb"/>
+      <a-assets-item id="pin4" src="marker4.glb"/>
+
+    
+
     </a-assets>
 
-    <a-entity id="socket" socket markerHandler></a-entity>
+    <a-entity id="socket" socket markerHandler pinHandler></a-entity>
 
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
-    <a-marker  type="barcode" id="1" value="1">
-      <a-entity  id="1" gltf-model="#egg0" position="0 0 0"></a-entity>
+    <a-marker type="barcode" id="1" value="1">
+      <a-entity id="1" gltf-model="#egg0" position="0 -2 0" rotation="-90 0 0"
+        material="transparent: true; opacity: 0.5"></a-entity>
     </a-marker>
-    <a-marker  type="barcode" id="2" value="2">
-      <a-entity  id="2" gltf-model="#egg1" position="0 0 0" rotation="210 0 0"
-        animation="property: position; to: 2 0 -1; loop: false; dur: 10000"></a-entity>
+    <a-marker type="barcode" id="2" value="2">
+      <a-entity id="2" gltf-model="#egg0" position="0 0 0" rotation="210 0 0"
+        animation="property: position; to: 2 0 -1; loop: false; dur: 5000"></a-entity>
     </a-marker>
-    <a-marker  type="barcode" id="3" value="3">
-      <a-entity     id="3" gltf-model="#egg2" position="0 0 0"
-        animation="property: position; to: 2 0 -1; loop: false; dur: 10000"></a-entity>
+    <a-marker type="barcode" id="3" value="3">
+      <a-entity id="3" gltf-model="#egg0" position="0 0 0"
+        animation="property: position; to: 2 0 -1; loop: false; dur: 5000"></a-entity>
     </a-marker>
-    <a-marker   type="barcode" id="4" value="4">
-      <a-entity     id="4" gltf-model="#egg3" position="0 0 0" rotation="210 0 0"
-        animation="property: position; to: 2 0 -1; loop: false; dur: 10000"></a-entity>
+    <a-marker type="barcode" id="4" value="4">
+      <a-entit id="4" gltf-model="#egg0" position="0 0 0" rotation="210 0 0"
+        animation="property: position; to: 2 0 -1; loop: false; dur: 5000">
+        </a-entity>
     </a-marker>
-    <a-marker  type="barcode" id="5" value="5">
-      <a-entity     id="5" gltf-model="#egg4" position="0 0 0" rotation="210 0 0"
-        animation="property: position; to: 2 0 -1; loop: false; dur: 10000"></a-entity>
+    <a-marker type="barcode" id="5" value="5">
+      <a-entity id="5" gltf-model="#egg0" position="0 0 0" rotation="210 0 0"
+        animation="property: position; to: 2 0 -1; loop: false; dur: 5000"></a-entity>
     </a-marker>
-    <a-marker   type="barcode" id="6" value="6">
-      <a-entity    id="6" gltf-model="#egg5" rotation="210 0 0"
-        animation="property: position; to: 2 0 -1; loop: false; dur: 10000"></a-entity>
+    <a-marker type="barcode" id="6" value="6">
+      <a-enti id="6" gltf-model="#egg0" rotation="210 0 0"
+        animation="property: position; to: 2 0 -1; loop: false; dur: 5000">
+        </a-entity>
     </a-marker>
+
+    <a-marker type="barcode" id="63" value="63">
+      <a-entity id="campus">
+        <a-entity id="map" mposition="0 0 0" gltf-model="#campus" scale="1 1 1" />
+        <a-entity id="marker0" position="2 -0.5 -1.2" gltf-model="#pin0" scale="0.6 0.6 0.6" />
+        <a-entity id="marker1" position="0 0.1 0" gltf-model="#pin1" scale="0.6 0.6 0.6" />
+        <a-entity id="marker2" position="0 0.2 0" gltf-model="#pin2" scale="0.6 0.6 0.6" />
+        <a-entity id="marker3" position="0 0.3 0" gltf-model="#pin3" scale="0.6 0.6 0.6" />
+        <a-entity id="marker4" position="0 0.4 0" gltf-model="#pin4" scale="0.6 0.6 0.6" />
+    </a-marker>
+
+    <a-entity light="type: ambient; color: #FFF"></a-entity>
     <a-entity camera></a-entity>
 
     <!-- static camera that moves according to the device movemenents -->

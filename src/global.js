@@ -9,3 +9,5 @@
 // Custom components in components/
 require('./components/socket.js');
 require('./components/markerHandler.js');
+require('./components/pinHandler.js');
+
