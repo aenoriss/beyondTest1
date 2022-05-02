@@ -32,7 +32,7 @@ AFRAME.registerComponent("markerhandler", {
             const material = child.material;
             // Do stuff with the material
             material.transparent = true;
-            material.opacity = 0.3;
+            material.opacity = 0.1;
             console.log("traversed", material);
             // material.map = null;
           }
@@ -44,7 +44,7 @@ AFRAME.registerComponent("markerhandler", {
               const material = child.material;
               // Do stuff with the material
               material.transparent = true;
-              material.opacity = 0.3;
+              material.opacity = 0.1;
               console.log("traversed", material);
               // material.map = null;
             }
