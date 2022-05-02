@@ -26,7 +26,7 @@ AFRAME.registerComponent("markerhandler", {
         // console.log("campus detected",marker1 )
 
       } else {
-        markerEl.firstElementChild.object3D.traverse((child) => {
+        markerEl.firstElementChild.object3D && markerEl.firstElementChild.object3D.traverse((child) => {
           if (child.type === 'Mesh') {
             const material = child.material;
             // Do stuff with the material
