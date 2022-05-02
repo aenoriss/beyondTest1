@@ -67,7 +67,7 @@ AFRAME.registerComponent("markerhandler", {
           }))
 
           if (triggerSelected.taken == false) {
-
+            console.log("ENTEREDDDD")
             markerEl.firstElementChild.addEventListener("model-loaded", (e) => {
               console.log("model loaded")
               markerEl.firstElementChild.object3D.traverse((child) => {
