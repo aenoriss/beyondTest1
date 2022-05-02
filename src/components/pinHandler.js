@@ -33,25 +33,25 @@ AFRAME.registerComponent("pinhandler", {
           case 2:
             if(marker.taken == true){
               console.log("marker elem", marker1)
-              // marker1.setAttribute("visible", false);
+              marker1.setAttribute("visible", false);
             } 
             break;
           case 3:
             if(marker.taken == true){
               console.log("marker elem", marker2)
-              // marker2.setAttribute("visible", false);
+              marker2.setAttribute("visible", false);
             } 
             break;
           case 4:
             if(marker.taken == true){
               console.log("marker elem", marker3)
-              // marker3.setAttribute("visible", false);
+              marker3.setAttribute("visible", false);
             } 
             break;
           case 5:
             if(marker.taken == true){
               console.log("marker elem", marker4)
-              // marker4.setAttribute("visible", false);
+              marker4.setAttribute("visible", false);
             } 
             break;
         }
