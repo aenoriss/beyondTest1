@@ -83,7 +83,7 @@ AFRAME.registerComponent("markerhandler", {
 
             console.log("markerEl", markerEl)
 
-            status.trigger[elemId].taken == true;
+            // status.trigger[elemId].taken == true;
             let soundEl = document.createElement("a-sound");
 
             socket.emit("updateEgg", elemId, cb => {
