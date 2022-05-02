@@ -20,8 +20,10 @@ AFRAME.registerComponent("pinhandler", {
     socket.on("eggOverview", async (data) => {
       console.log("DATAA TIC", data)
       data.forEach((marker) => {
+        console.log("marker", marker)
         switch (marker) {
           case marker.id == 1:
+            console.log("marker.taken", marker.taken)
             marker.taken == true && marker0.setAttribute("visible", false);
             break;
           case marker.id == 2:
