@@ -18,9 +18,9 @@ AFRAME.registerComponent("pinhandler", {
     let marker4 = document.getElementById("marker4");
 
     socket.on("eggOverview", async (data) => {
-      console.log("DATAA TIC", data)
+      // console.log("DATAA TIC", data)
       data.forEach((marker) => {
-        console.log("marker", marker)
+        // console.log("marker", marker)
         let markerId = marker.id;
         switch (markerId) {
           case 1:
