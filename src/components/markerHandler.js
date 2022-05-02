@@ -38,8 +38,7 @@ AFRAME.registerComponent("markerhandler", {
           }
         })
 
-        markerEl.firstElementChild.addEventListener("model-loaded", (e) => {
-          console.log("model loaded")
+    
           markerEl.firstElementChild.object3D.traverse((child) => {
             if (child.type === 'Mesh') {
               const material = child.material;
@@ -50,7 +49,6 @@ AFRAME.registerComponent("markerhandler", {
               // material.map = null;
             }
           })
-        })
 
         console.log("elemIdelemId", e.target)
 
