@@ -26,17 +26,17 @@ AFRAME.registerComponent("markerhandler", {
         // console.log("campus detected",marker1 )
 
       } else {
-        markerEl.firstElementChild.setAttribute("position", "0 0 0");
-        markerEl.firstElementChild.object3D && markerEl.firstElementChild.object3D.traverse((child) => {
-          if (child.type === 'Mesh') {
-            const material = child.material;
-            // Do stuff with the material
-            material.transparent = true;
-            material.opacity = 0.3;
-            console.log("traversed", material);
-            // material.map = null;
-          }
-        })
+        // markerEl.firstElementChild.setAttribute("position", "0 0 0");
+        // markerEl.firstElementChild.object3D && markerEl.firstElementChild.object3D.traverse((child) => {
+        //   if (child.type === 'Mesh') {
+        //     const material = child.material;
+        //     // Do stuff with the material
+        //     material.transparent = true;
+        //     material.opacity = 0.3;
+        //     console.log("traversed", material);
+        //     // material.map = null;
+        //   }
+        // })
 
         markerEl.firstElementChild.addEventListener("model-loaded", (e) => {
           console.log("model loaded")
