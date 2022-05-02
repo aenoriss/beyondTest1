@@ -42,7 +42,8 @@
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
     <a-assets>
-      <a-assets-item id="egg0" src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/egg1.gltf?v=1650864101186">
+      <a-assets-item id="egg0"
+        src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/egg1.gltf?v=1650864101186">
       </a-assets-item>
       <a-assets-item id="egg1"
         src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/egg1.gltf?v=1650864101186">
@@ -62,13 +63,18 @@
       <a-assets-item id="campus"
         src="https://cdn.glitch.me/e3e71082-00bd-4110-8213-e2a08e866e77/campus2.gltf?v=1651127072578">
       </a-assets-item>
-      <a-assets-item id="pin0" src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/marker0Final.gltf?v=1651477210838"/>
-      <a-assets-item id="pin1" src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/marker1Final.gltf?v=1651477210959"/>
-      <a-assets-item id="pin2" src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/marker2Final.gltf?v=1651477211203"/>
-      <a-assets-item id="pin3" src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/marker3Final.gltf?v=1651477211086"/>
-      <a-assets-item id="pin4" src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/marker4Final.gltf?v=1651477211161"/>
+      <a-assets-item id="pin0"
+        src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/marker0Final.gltf?v=1651477210838" />
+      <a-assets-item id="pin1"
+        src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/marker1Final.gltf?v=1651477210959" />
+      <a-assets-item id="pin2"
+        src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/marker2Final.gltf?v=1651477211203" />
+      <a-assets-item id="pin3"
+        src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/marker3Final.gltf?v=1651477211086" />
+      <a-assets-item id="pin4"
+        src="https://cdn.glitch.global/91eba6f9-a9d4-45db-afeb-7115df7cf197/marker4Final.gltf?v=1651477211161" />
 
-    
+
 
     </a-assets>
 
@@ -78,8 +84,7 @@
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
     <a-marker type="barcode" id="1" value="1">
-      <a-entity id="1" gltf-model="#egg0" posi
-      tion="0 -2 0" rotation="-90 0 0"
+      <a-entity id="1" gltf-model="#egg0" posi tion="0 -2 0" rotation="-90 0 0"
         material="transparent: true; opacity: 0.5"></a-entity>
     </a-marker>
     <a-marker type="barcode" id="2" value="2">
@@ -107,12 +112,13 @@
 
     <a-marker type="barcode" id="63" value="63">
       <a-entity id="campus">
-        <a-entity id="map" mposition="0 0 0" gltf-model="#campus" scale="1 1 1" />
-        <a-entity id="marker0" position="2 -0.5 -1.2" gltf-model="#pin0" scale="0.6 0.6 0.6" />
-        <a-entity id="marker1" position="2 -0.5 -1.2" gltf-model="#pin1" scale="0.6 0.6 0.6" />
-        <a-entity id="marker2" position="2 -0.5 -1.2" gltf-model="#pin2" scale="0.6 0.6 0.6" />
-        <a-entity id="marker3" position="2 -0.5 -1.2" gltf-model="#pin3" scale="0.6 0.6 0.6" />
-        <a-entity id="marker4" position="2 -0.5 -1.2" gltf-model="#pin4" scale="0.6 0.6 0.6" />
+        <a-entity id="map" mposition="0 0 0" gltf-model="#campus" scale="1 1 1"></a-entity>
+        <a-entity id="marker0" position="2 -0.5 -1.2" gltf-model="#pin0" scale="0.6 0.6 0.6"></a-entity>
+        <a-entity id="marker1" position="2 -0.5 -1.2" gltf-model="#pin1" scale="0.6 0.6 0.6"></a-entity>
+        <a-entity id="marker2" position="2 -0.5 -1.2" gltf-model="#pin2" scale="0.6 0.6 0.6"></a-entity>
+        <a-entity id="marker3" position="2 -0.5 -1.2" gltf-model="#pin3" scale="0.6 0.6 0.6"></a-entity>
+        <a-entity id="marker4" position="2 -0.5 -1.2" gltf-model="#pin4" scale="0.6 0.6 0.6"></a-entity>
+      </a-entity>
     </a-marker>
 
     <a-entity light="type: ambient; color: #FFF"></a-entity>
