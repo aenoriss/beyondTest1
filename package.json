@@ -6,10 +6,6 @@
     "start": "webpack-dev-server --https",
     "build": "webpack"
   },
-  "engines" : { 
-    "npm" : ">=8.0.0 <9.0.0",
-    "node" : ">=14.x <14.x"
-  },
   "dependencies": {
     "aframe": "^1.3.0",
     "aframe-animation-component": "^5.1.0",
